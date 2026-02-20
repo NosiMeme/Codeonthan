@@ -8,17 +8,17 @@
 
 <body>
   <!-- HEADER -->
-  <header class="slide-down">
+  <header>
     <div class="logo">
       <div class="logo-mark">SG</div>
       <div>
         <h1>StormGuard</h1>
-        <p>Rescue & Relief Hub ·  Back’em Up Bratz</p>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
       </div>
     </div>
 
-<!--NAV!-->
-   <nav>
+    <!-- NAVIGATION -->
+    <nav>
       <a href="index.html">Home</a>
       <a href="storm-info.html">Storm Info</a>
       <a href="game.html">Game</a>
@@ -37,56 +37,69 @@
           <a href="citations.html">Citations</a>
           <a href="resources.html">Resources</a>
           <a href="faq.html">FAQ</a>
-           <a href="help.html">Help</a>
+          <a href="help.html">Help</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
-<!--For the dropdown menu!-->
- <script>
-  function toggleDropdown() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-  }
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    function toggleDropdown() {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+    }
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.nav-more-button')) {
-      const dropdowns = document.getElementsByClassName('nav-more-menu');
-      for (let i = 0; i < dropdowns.length; i++) {
-        const openDropdown = dropdowns[i];
-        if (openDropdown.style.display === 'block') {
-          openDropdown.style.display = 'none';
+    window.onclick = function(event) {
+      if (!event.target.matches('.nav-more-button')) {
+        const dropdowns = document.getElementsByClassName('nav-more-menu');
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.style.display === 'block') {
+            openDropdown.style.display = 'none';
+          }
         }
       }
     }
-  }
-</script>
+  </script>
 
   <!-- MAIN -->
-  <main class="fade-in">
-    <section>
-      <h2>Future Plans</h2>
-      <p>
-        StormGuard is just the beginning. With more time and resources, we would love
-        to expand this project into a full emergency‑response platform.
-      </p>
+  <main>
+    <h2>Future Plans</h2>
+    <p>
+      StormGuard is just the beginning. With more time and resources, we envision expanding this project into a comprehensive emergency-response platform that blends education, technology, and community support.
+    </p>
 
-      <h3>Our Goals</h3>
-      <ul>
-        <li>More game levels with realistic storm scenarios</li>
-        <li>Interactive shelter and danger zone map</li>
-        <li>Physical prototype of StormBand</li>
-        <li>Multilingual support</li>
-        <li>Partnerships with schools and emergency organizations</li>
-      </ul>
+    <div class="future-layout">
+      <!-- PROJECT GOALS -->
+      <section class="future-section">
+        <h3>Our Goals</h3>
+        <ul>
+          <li>Develop more interactive game levels with realistic storm scenarios</li>
+          <li>Create an interactive shelter and danger zone map with live updates</li>
+          <li>Build a physical prototype of the StormBand wearable for alerts and monitoring</li>
+          <li>Add multilingual support to reach global audiences</li>
+          <li>Partner with schools, local governments, and emergency organizations</li>
+        </ul>
+      </section>
 
-      <p>
-        Our dream is to turn StormGuard into a tool that helps real people stay safe
-        during real storms.
-      </p>
-    </section>
+      <!-- COMMUNITY & EDUCATION -->
+      <section class="future-section">
+        <h3>Community & Education</h3>
+        <ul>
+          <li>Workshops and training programs on storm preparedness</li>
+          <li>Volunteer coordination for disaster relief efforts</li>
+          <li>Educational modules integrated with App Lab and Code.org projects</li>
+          <li>Real-time scenario simulations to practice emergency responses</li>
+          <li>Encourage student and community participation in storm research projects</li>
+        </ul>
+      </section>
+    </div>
+
+    <p>
+      Our ultimate mission is to make StormGuard a tool that not only teaches storm safety but also actively supports communities before, during, and after storms. We aim to inspire awareness, preparedness, and collaboration to save lives.
+    </p>
   </main>
 
   <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>

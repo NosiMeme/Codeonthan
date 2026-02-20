@@ -8,7 +8,7 @@
 
 <body>
   <!-- HEADER -->
-  <header class="slide-down">
+  <header>
     <div class="logo">
       <div class="logo-mark">SG</div>
       <div>
@@ -17,9 +17,7 @@
       </div>
     </div>
 
-
-    <!-- NAV !-->
-     <nav>
+    <nav>
       <a href="index.html">Home</a>
       <a href="storm-info.html">Storm Info</a>
       <a href="game.html">Game</a>
@@ -30,7 +28,6 @@
       <a href="stormband.html">StormBand</a>
       <a href="future.html">Future</a>
 
-      <!-- DROPDOWN -->
       <div class="nav-more">
         <div class="nav-more-button" onclick="toggleDropdown()">More</div>
         <div class="nav-more-menu" id="dropdownMenu">
@@ -38,58 +35,77 @@
           <a href="citations.html">Citations</a>
           <a href="resources.html">Resources</a>
           <a href="faq.html">FAQ</a>
-           <a href="help.html">Help</a>
+          <a href="help.html">Help</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
-<!--For the dropdown menu!-->
- <script>
-  function toggleDropdown() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-  }
+  <!-- MAIN CONTENT -->
+  <main class="fade-in">
+    <div class="game-layout">
+      <!-- RESCUE RUSH GAME SECTION -->
+      <section class="game-section">
+        <h2>Rescue Rush — The Game</h2>
+        <p>
+          <strong>Rescue Rush</strong> is a fast-paced, interactive rescue simulation game built on Code.org.
+          Players navigate a flooded city, rescuing civilians and avoiding hazards.
+        </p>
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.nav-more-button')) {
-      const dropdowns = document.getElementsByClassName('nav-more-menu');
-      for (let i = 0; i < dropdowns.length; i++) {
-        const openDropdown = dropdowns[i];
-        if (openDropdown.style.display === 'block') {
-          openDropdown.style.display = 'none';
+        <h3>Educational Objectives</h3>
+        <ul>
+          <li>Understand how quickly flood conditions can change.</li>
+          <li>Learn decision-making under pressure.</li>
+          <li>Recognize safe vs unsafe paths in emergencies.</li>
+          <li>Develop situational awareness and risk assessment skills.</li>
+        </ul>
+
+        <h3>Play Rescue Rush</h3>
+        <iframe src="https://scratch.mit.edu/projects/1279613521/embed" width="485" height="402" scrolling="no" allowfullscreen></iframe>
+        <p class="note"><em>Note:</em> This game teaches storm preparedness, safe decision-making, and emergency response strategies.</p>
+      </section>
+
+      <!-- APP LAB PROJECT SECTION -->
+      <section class="applab-section">
+        <h2>App Lab Project: Interactive Storm Questions</h2>
+        <p>
+          Explore our The <stronger>StormGuard App Lab project </stronger> is an interactive educational simulation where players explore storm scenarios, respond to emergency situations, and answer questions about storm research and safety practices. Through realistic scenarios and guided prompts, users test different strategies for protecting people, property, and communities, while also learning basic coding concepts by adjusting simulation parameters. This hands on experience helps reinforce storm preparedness, decision-making under pressure, and understanding the impact of various safety actions in real-world storm events.
+        </p>
+
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Simulate flood and storm scenarios safely.</li>
+          <li>Practice decision-making in emergency situations.</li>
+          <li>Learn basic coding by adjusting simulation parameters.</li>
+        </ul>
+
+        <h3>Try the App Lab Simulation</h3>
+        <iframe width="392" height="620" src="https://studio.code.org/projects/applab/_FxLCtnnnIRZQwzKVWMmQZmHQD3d0np2FCz2F_kpQcE/embed"></iframe>
+        <p class="note"><em>Tip:</em> Experiment to see how different choices affect outcomes.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+
+  <script>
+    function toggleDropdown() {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.nav-more-button')) {
+        const dropdowns = document.getElementsByClassName('nav-more-menu');
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.style.display === 'block') {
+            openDropdown.style.display = 'none';
+          }
         }
       }
     }
-  }
-</script>
-
-  <!-- MAIN -->
-  <main class="fade-in">
-    <section>
-      <h2>Rescue Rush — The Game</h2>
-      <p>
-        Rescue Rush is a fast paced rescue simulation game built in Code.org Game Lab.
-        You play as a rescuer navigating a flooded city, trying to reach people who
-        need help while avoiding dangerous flood zones.
-      </p>
-
-      <h3>What You’ll Learn</h3>
-      <ul>
-        <li>How quickly flood conditions can change</li>
-        <li>How rescuers make decisions under pressure</li>
-        <li>Why safe paths matter during emergencies</li>
-      </ul>
-
-      <a class="btn glow" href="YOUR_GAME_LINK_HERE" target="_blank">
-        Play Rescue Rush
-      </a>
-
-      <p class="note">Replace the link above with your real Code.org game URL.</p>
-    </section>
-  </main>
-
-  <footer>StormGuard © 2026 · Built by  Back’em up Bratz</footer>
+  </script>
 </body>
 </html>
