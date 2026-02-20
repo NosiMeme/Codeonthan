@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Poem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub ·  Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <!-- NAV !-->
+      <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+           <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!--For the dropdown menu!-->
+ <script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>
+
+  <!-- MAIN -->
+  <main class="fade-in">
+    <section>
+      <h2>“When the Waters Rise”</h2>
+
+      <pre class="poem">
+When the waters rise and the streets turn gray,
+Sirens sing louder than the light of day.
+Phones go silent, signals fade,
+Maps mean nothing in the floods we made.
+
+But in the dark, a signal glows,
+A hand reaches out where the river flows.
+A call for help, a flashing light,
+A promise whispered: “You’ll be alright.”
+
+We are the voices cutting through the storm,
+Code and courage in digital form.
+If fear’s the wave and hope’s the guide,
+We’ll hack it back—and stand beside.
+      </pre>
+
+      <p>
+        This poem is the emotional heart of StormGuard. It reminds us that storms
+        aren’t just weather events they’re moments of fear, courage, and hope. We
+        wanted to capture the feeling of being caught in a storm, but also the
+        strength that comes from community, technology, and resilience.
+      </p>
+
+      <p>
+        StormGuard isn’t just about information. It’s about connection. It’s about
+        remembering that even in the darkest moments, someone is out there trying to
+        help. That’s the spirit behind our game, our StormBand concept, and this
+        entire project.
+      </p>
+    </section>
+  </main>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+</body>
+</html>

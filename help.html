@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Help Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <!-- NAV !-->
+   <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+           <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!--For the dropdown menu!-->
+ <script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>   
+
+  <!-- MAIN -->
+  <main class="fade-in">
+    <section>
+      <h2>Help Center</h2>
+      <p>
+        Welcome to the StormGuard Help Center. This page is here to guide you through
+        the website, explain how everything works, and help you find what you need.
+      </p>
+
+      <h3>How to Use StormGuard</h3>
+      <ul>
+        <li><strong>Navigation Bar:</strong> Use the top menu to visit any page.</li>
+        <li><strong>More Dropdown:</strong> Extra pages like Resources and FAQ.</li>
+        <li><strong>Game Page:</strong> Play Rescue Rush on Code.org.</li>
+        <li><strong>Emergency Page:</strong> Try the SOS simulation button.</li>
+        <li><strong>Storm Info:</strong> Learn real safety tips.</li>
+      </ul>
+
+      <h3>Need More Help?</h3>
+      <p>
+        Visit the <a href="faq.html">FAQ page</a> or the
+        <a href="contact.html">Contact page</a> for more support.
+      </p>
+    </section>
+  </main>
+
+  <footer>StormGuard © 2026 · Built by  Back’em Up Bratz</footer>
+</body>
+</html>

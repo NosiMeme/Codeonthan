@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Storm Information</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <!-- NAV -->
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+           <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+    window.onclick = function(e) {
+      if (!e.target.matches(".nav-more-button")) {
+        document.getElementById("dropdownMenu").style.display = "none";
+      }
+    };
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main class="fade-in">
+
+    <h2>Storm Information</h2>
+    <p class="intro">
+      Storms are powerful natural events that can change lives in minutes. This page
+      explains storms in a way that both teens and adults can understand — clear,
+      simple, and deeply informative. Click each section to explore more.
+    </p>
+
+    <!-- THREE MAIN SECTIONS -->
+    <div class="storm-sections">
+
+      <!-- SECTION 1 -->
+      <section class="storm-section section-left">
+        <h2>1. What Storms Are & Why They Matter</h2>
+        <p>
+          Storms form when the atmosphere becomes unstable. They can be mild or
+          extremely dangerous, depending on temperature, moisture, and wind.
+        </p>
+
+        <div class="accordion">
+          <a href="stormare.html">
+            <button onclick="toggleAccordion('sec 2')">More Info ▼</button>
+        </a>
+        
+
+          
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section class="storm-section section-middle">
+        <h2>2. How Storms Affect People & Communities</h2>
+        <p>
+          Storms can damage homes, shut down power, contaminate water, and put lives at risk.
+          Their impact can last long after the storm is over.
+        </p>
+
+        <div class="accordion">
+          <a href="stormsaffect.html">
+            <button onclick="toggleAccordion('sec 2')">More Info ▼</button>
+        </a>
+        
+        
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section class="storm-section section-right">
+        <h2>3. How to Stay Safe Before, During & After Storms</h2>
+        <p>
+          Knowing what to do can save your life and the lives of others. Storms can develop quickly and bring dangerous conditions such as high winds, flash flooding, lightning, hail,
+           storm surge, and tornadoes. Preparing ahead of time, responding safely during the event, and recovering carefully afterward
+            significantly reduce injuries, property damage, and long term health risks.
+
+        <div class="accordion">
+          <a href="stormexplanded.html">
+            <button onclick="toggleAccordion('sec 2')">More Info ▼</button>
+        </a>
+          <div id="sec3" class="accordion-content">
+
+        
+  
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SOURCES -->
+    <section class="storm-section sources-section">
+      <h2>Trusted Sources & More to Learn</h2>
+      <p>These websites provide reliable, up‑to‑date storm information:</p>
+      <ul>
+        <li><a href="https://www.ready.gov" target="_blank">Ready.gov – U.S. emergency preparedness</a></li>
+        <li><a href="https://www.weather.gov" target="_blank">NOAA National Weather Service</a></li>
+        <li><a href="https://www.redcross.org" target="_blank">American Red Cross – Disaster safety</a></li>
+        <li><a href="https://www.cdc.gov/disasters" target="_blank">CDC – Health & safety after disasters</a></li>
+        <li><a href="https://www.fema.gov" target="_blank">FEMA – Federal Emergency Management Agency</a></li>
+        <li><a href="https://www.nhc.noaa.gov" target="_blank">National Hurricane Center</a></li>
+        <li><a href="https://earthobservatory.nasa.gov" target="_blank">NASA Earth Observatory</a></li>
+        <li><a href="https://www.emdat.be" target="_blank">EM‑DAT Global Disaster Database</a></li>
+      </ul>
+      <p>
+        Information on storm deaths, impacts, and safety is based on summaries from
+        these organizations and other public disaster reports.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+
+  <!-- ACCORDION SCRIPT -->
+  <script>
+    function toggleAccordion(id) {
+      const box = document.getElementById(id);
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

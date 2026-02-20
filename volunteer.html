@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Volunteer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <!-- NAV -->
+   <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+           <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display =
+      dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>
+
+  <!-- MAIN -->
+  <main class="fade-in">
+    <section>
+      <h2>Volunteer Opportunities</h2>
+      <p>
+        Want to help your community during storms? Volunteering is one of the most
+        powerful ways to make a difference. Whether you’re a student, adult, or
+        senior, there’s a role for everyone.
+      </p>
+
+      <h3>Ways to Volunteer</h3>
+      <ul>
+        <li>Help pack emergency kits</li>
+        <li>Assist at local shelters</li>
+        <li>Distribute food and water</li>
+        <li>Support cleanup efforts after storms</li>
+        <li>Teach storm safety at schools</li>
+      </ul>
+
+      <h3>Why Volunteer?</h3>
+      <p>
+        Volunteering builds stronger communities, saves lives, and helps people feel
+        supported during difficult times. Even small actions can make a huge impact.
+      </p>
+
+      <p>
+        StormGuard encourages everyone to get involved — because safety is a team
+        effort.
+      </p>
+
+      <!-- ⭐ NEW SECTION: PLACES TO VOLUNTEER ⭐ -->
+      <h3>Where You Can Volunteer</h3>
+      <p>Here are trusted organizations where people can volunteer to help during storms and disasters:</p>
+
+      <div class="volunteer-grid">
+
+        <div class="volunteer-card">
+          <h4>American Red Cross</h4>
+          <p>Help with shelters, disaster relief, blood drives, and emergency response.</p>
+          <a href="https://www.redcross.org/volunteer" target="_blank" class="btn-volunteer">Volunteer Here</a>
+        </div>
+
+        <div class="volunteer-card">
+          <h4>FEMA Community Response</h4>
+          <p>Join CERT teams, support disaster prep training, and help local responders.</p>
+          <a href="https://www.ready.gov/cert" target="_blank" class="btn-volunteer">Join CERT</a>
+        </div>
+
+        <div class="volunteer-card">
+          <h4>Team Rubicon</h4>
+          <p>Veterans and civilians working together to help communities after disasters.</p>
+          <a href="https://teamrubiconusa.org/volunteer/" target="_blank" class="btn-volunteer">Sign Up</a>
+        </div>
+
+        <div class="volunteer-card">
+          <h4>Feeding America</h4>
+          <p>Help distribute food and supplies to families affected by storms.</p>
+          <a href="https://www.feedingamerica.org/take-action/volunteer" target="_blank" class="btn-volunteer">Volunteer</a>
+        </div>
+
+        <div class="volunteer-card">
+          <h4>Local Animal Shelters</h4>
+          <p>Support pets displaced by storms by helping shelters and rescue groups.</p>
+          <a href="https://www.petfinder.com/animal-shelters-and-rescues/volunteer/" target="_blank" class="btn-volunteer">Help Animals</a>
+        </div>
+
+        <div class="volunteer-card">
+          <h4>Habitat for Humanity</h4>
+          <p>Help rebuild homes and communities after major storm damage.</p>
+          <a href="https://www.habitat.org/volunteer" target="_blank" class="btn-volunteer">Rebuild Homes</a>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+
+</body>
+</html>

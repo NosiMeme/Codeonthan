@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Emergency SOS</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GOOGLE MAPS API — INSERT YOUR KEY BELOW -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap">
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+           <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    function toggleDropdown() {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.style.display =
+        dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.nav-more-button')) {
+        const dropdowns = document.getElementsByClassName('nav-more-menu');
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.style.display === 'block') {
+            openDropdown.style.display = 'none';
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- MAIN -->
+  <main class="fade-in">
+    <section>
+      <h2>Emergency SOS Button</h2>
+      <p>
+        This page shows a working simulation of an emergency SOS alert. It does not
+        contact real emergency services, but it demonstrates how StormGuard and
+        StormBand could work together in a real system.
+      </p>
+
+      <button id="sosButton" class="btn btn-sos glow">🚨 EMERGENCY SOS</button>
+
+      <div id="sosOutput" class="sos-output" style="display:none;">
+        <h3>SOS Signal Sent (Simulation)</h3>
+        <p id="fakeLocation"></p>
+
+        <!-- REAL MAP -->
+        <div id="map" class="map-placeholder">
+          Map loading...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+
+  <!-- SOS + MAP SCRIPT -->
+  <script>
+    // SOS Button Function
+    document.getElementById("sosButton").addEventListener("click", function () {
+      document.getElementById("sosOutput").style.display = "block";
+
+      // Get user location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        document.getElementById("fakeLocation").innerHTML =
+          "Geolocation is not supported by this browser.";
+      }
+    });
+
+    // Show user location on map
+    function showPosition(position) {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+
+      document.getElementById("fakeLocation").innerHTML =
+        "📍 Your Location (Approx):<br>Latitude: " + lat + "<br>Longitude: " + lng;
+
+      initMap(lat, lng);
+    }
+
+    // Google Map
+    function initMap(lat = 40.0, lng = -82.0) {
+      const userLocation = { lat: lat, lng: lng };
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: userLocation,
+      });
+
+      new google.maps.Marker({
+        position: userLocation,
+        map: map,
+        title: "Your Location",
+      });
+    }
+
+    // Error handling
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          document.getElementById("fakeLocation").innerHTML =
+            "User denied location request.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          document.getElementById("fakeLocation").innerHTML =
+            "Location information unavailable.";
+          break;
+        case error.TIMEOUT:
+          document.getElementById("fakeLocation").innerHTML =
+            "Location request timed out.";
+          break;
+        default:
+          document.getElementById("fakeLocation").innerHTML =
+            "An unknown error occurred.";
+      }
+    }
+  </script>
+
+</body>
+</html>

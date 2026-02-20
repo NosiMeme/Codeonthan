@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">StormGuard</div>
+    <div class="loader-spinner"></div>
+    <p>Loading safety, style & storm power…</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html"><span class="icon"><span class="icon"></span></span>Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="help.html">Help</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="community.html">Community Support</a>
+          <a href="volunteer.html">Volunteer</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="fade-in">
+    <section>
+
+      <h2>How to Stay Safe Before, During & After Storms</h2>
+      <p>
+        Knowing what to do can save your life and the lives of others. Storms can
+        develop quickly and bring dangerous conditions such as high winds, flash
+        flooding, lightning, hail, storm surge, and tornadoes. Preparing ahead
+        of time, responding safely during the event, and recovering carefully
+        afterward significantly reduce injuries, property damage, and long-term
+        health risks.
+      </p>
+
+      <!-- BEFORE -->
+      <h3>Before a Storm (Expanded)</h3>
+      <p>
+        Preparation is the most important step in storm safety. Planning early
+        reduces panic and helps families respond quickly when warnings are issued.
+      </p>
+      <ul>
+        <li>Secure outdoor items like trash cans, chairs, and toys to prevent them from becoming dangerous flying debris in high winds.</li>
+        <li>Charge your phone, power banks, and backup batteries in case of power outages.</li>
+        <li>Prepare an emergency kit with water (one gallon per person per day), non-perishable food, flashlight, batteries, first aid supplies, and medications.</li>
+        <li>Know your shelter location or evacuation route and practice it with your family.</li>
+        <li>Bring pets indoors and prepare food, water, and carriers for them.</li>
+        <li>Check weather alerts from trusted sources and understand warning levels.</li>
+        <li>Fill your gas tank in case evacuation becomes necessary.</li>
+        <li>Store important documents such as IDs and insurance papers in waterproof bags.</li>
+        <li>Trim weak tree branches and clear gutters to reduce storm damage and flooding risk.</li>
+        <li>Learn how to shut off utilities such as gas, water, and electricity if instructed by authorities.</li>
+      </ul>
+
+      <!-- DURING -->
+      <h3>During a Storm (Expanded)</h3>
+      <p>
+        When a storm is happening, your focus should be on immediate safety.
+        Staying indoors and following official guidance can prevent serious injury.
+      </p>
+      <ul>
+        <li>Stay indoors and away from windows, glass doors, and exterior walls.</li>
+        <li>Use flashlights instead of candles to prevent accidental fires.</li>
+        <li>Listen to weather alerts on your phone, battery powered radio, or TV for updates.</li>
+        <li>Do not drive through floodwater just a small amount can sweep vehicles away.</li>
+        <li>If told to evacuate, leave immediately and follow designated routes.</li>
+        <li>Stay in a small interior room or basement during tornado warnings.</li>
+        <li>Move to higher ground immediately if flooding begins.</li>
+        <li>Avoid using electrical appliances during lightning storms.</li>
+        <li>Keep emergency supplies nearby in case you must shelter in place for several hours.</li>
+        <li>Remain calm and help children or elderly family members stay reassured.</li>
+      </ul>
+
+      <!-- AFTER -->
+      <h3>After a Storm (Expanded)</h3>
+      <p>
+        Even after the storm has passed, serious hazards can remain. Recovery
+        should be done carefully and patiently to prevent further injuries.
+      </p>
+      <ul>
+        <li>Avoid floodwater; it may contain sewage, chemicals, sharp debris, or hidden electrical currents.</li>
+        <li>Stay away from downed power lines and report them immediately.</li>
+        <li>Check on neighbors, especially older adults, young children, or people with disabilities.</li>
+        <li>Throw away spoiled or contaminated food, especially if refrigeration was lost.</li>
+        <li>Wear gloves, boots, and protective clothing when cleaning up debris.</li>
+        <li>Take photos of damage for insurance and disaster assistance claims.</li>
+        <li>Watch for mold growth in homes and dry wet areas as quickly as possible.</li>
+        <li>Do not use wet electrical appliances until inspected.</li>
+        <li>Operate generators outdoors only and away from windows to prevent carbon monoxide poisoning.</li>
+        <li>Seek emotional support if feeling stressed, anxious, or overwhelmed after the event.</li>
+      </ul>
+
+      <p>
+        Storm safety is a shared responsibility. By preparing early, acting wisely
+        during emergencies, and helping communities recover safely, we can reduce
+        the devastating impacts of severe weather. Education, awareness, and
+        cooperation save lives.
+      </p>
+
+    </section>
+  </main>
+
+  <script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+  </script>
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+  <script src="script.js"></script>
+</body>
+</html>

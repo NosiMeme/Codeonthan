@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">StormGuard</div>
+    <div class="loader-spinner"></div>
+    <p>Loading safety, style & storm power…</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html"> <span class="icon"><span class="icon"></span></span>Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="help.html">Help</a>
+       <a href="emergency.html">Emergency</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+     
+
+      <!-- DROPDOWN -->
+       <div class="nav-more">
+    <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+    <div class="nav-more-menu" id="dropdownMenu">
+         <a href="team.html">Team</a>
+         <a href="citations.html">Citations</a>
+         <a href="resources.html">Resources</a>
+         <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="community.html">Community Support</a>
+          <a href="volunteer.html">Volunteer</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="fade-in">
+    <section>
+        <h3>Storm Dangers (Expanded)</h3>
+        <ul>
+          <li><strong>Flooding:</strong> Destroys homes, roads, and cars.</li>
+          <li><strong>Power outages:</strong> Affect heating, cooling, and medical devices.</li>
+          <li><strong>Road damage:</strong> Blocks emergency vehicles.</li>
+          <li><strong>Fires:</strong> Caused by lightning or damaged power lines.</li>
+          <li><strong>Contaminated water:</strong> Floodwater carries sewage and chemicals.</li>
+          <li><strong>Building collapse:</strong> Strong winds weaken structures.</li>
+          <li><strong>Landslides:</strong> Heavy rain loosens soil on hills.</li>
+          <li><strong>Air pollution:</strong> Wildfire storms create toxic smoke.</li>
+        </ul>
+
+        <h3>Storm Death Statistics (Expanded)</h3>
+        <p>
+          Even with modern technology, storms still cause thousands of deaths
+          worldwide each year. In the United States, weather‑related events kill
+          hundreds of people every year.
+        </p>
+
+        <table class="storm-table">
+          <tr><th>Storm Type</th><th>Approx. Deaths / Year</th></tr>
+          <tr><td>Heat Waves</td><td>Hundreds</td></tr>
+          <tr><td>Floods</td><td>Hundreds–Thousands</td></tr>
+          <tr><td>Hurricanes</td><td>Varies widely</td></tr>
+          <tr><td>Tornadoes</td><td>Dozens to 100+</td></tr>
+          <tr><td>Winter Storms</td><td>Dozens</td></tr>
+          <tr><td>Wildfires</td><td>Dozens</td></tr>
+        </table>
+
+        <h3>Major Storm Events (Expanded)</h3>
+        <p><strong>Hurricane Katrina (2005):</strong> Over 1,800 deaths; massive flooding in New Orleans.</p>
+        <p><strong>Pakistan Floods (2010):</strong> Around 1,700 deaths; 20 million people affected.</p>
+        <p><strong>Hurricane Maria (2017):</strong> Thousands of deaths; Puerto Rico lost power for months.</p>
+        <p><strong>Joplin Tornado (2011):</strong> EF5 tornado; 158 deaths and thousands of buildings destroyed.</p>
+        <p><strong>Typhoon Haiyan (2013):</strong> Over 6,000 deaths in the Philippines.</p>
+        <p><strong>European Heat Wave (2003):</strong> Over 70,000 deaths.</p>
+        <p><strong>Cyclone Idai (2019):</strong> Over 1,300 deaths in Africa.</p>
+
+        <h3>Mental Health Impacts</h3>
+        <p>
+          Storms can cause anxiety, PTSD, fear of future storms, sleep problems,
+          and stress from losing homes or belongings. Children and teens are
+          especially vulnerable.
+        </p>
+
+        <h3>Environmental Impacts</h3>
+        <p>
+          Storms affect nature too — floods spread pollution, hurricanes destroy
+          beaches, tornadoes uproot forests, and heat waves kill plants and animals.
+        </p>
+
+      </div>
+    </div>
+    </section>
+
+
+    
+
+
+  </main>
+
+  <script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>
+
+
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+  <script src="script.js"></script>
+</body>
+</html>          
+

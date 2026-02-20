@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">StormGuard</div>
+    <div class="loader-spinner"></div>
+    <p>Loading safety, style & storm power…</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html"> <span class="icon"><span class="icon"></span></span>Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="help.html">Help</a>
+       <a href="emergency.html">Emergency</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+     
+
+      <!-- DROPDOWN -->
+       <div class="nav-more">
+    <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+    <div class="nav-more-menu" id="dropdownMenu">
+         <a href="team.html">Team</a>
+         <a href="citations.html">Citations</a>
+         <a href="resources.html">Resources</a>
+         <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="community.html">Community Support</a>
+          <a href="volunteer.html">Volunteer</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="fade-in">
+    <section>
+        <h3>Storm Basics</h3>
+        <p>
+          A storm is any disturbed state of the atmosphere that affects the Earth’s
+          surface. Storms can bring rain, snow, wind, lightning, hail, or extreme
+          heat. They form when warm, moist air rises and meets cooler air, creating
+          instability and energy in the atmosphere.
+        </p>
+
+        <h3>Why Storms Matter</h3>
+        <p>
+          Storms matter because they affect:
+        </p>
+        <ul>
+          <li>Homes and buildings</li>
+          <li>Roads, bridges, and transportation</li>
+          <li>Schools, hospitals, and emergency services</li>
+          <li>Power, water, and communication systems</li>
+          <li>Wildlife and the environment</li>
+          <li>People’s safety and health</li>
+        </ul>
+
+        <h3>Types of Storms (Expanded)</h3>
+        <p><strong>Floods:</strong> The most common natural disaster worldwide.</p>
+        <p><strong>Thunderstorms:</strong> Bring lightning, hail, and strong winds.</p>
+        <p><strong>Hurricanes:</strong> Massive rotating storms with storm surge.</p>
+        <p><strong>Tornadoes:</strong> Spinning columns of destructive wind.</p>
+        <p><strong>Blizzards:</strong> Snowstorms with freezing temperatures.</p>
+        <p><strong>Heat Waves:</strong> Long periods of extreme heat.</p>
+        <p><strong>Derechos:</strong> Long-lasting windstorms.</p>
+        <p><strong>Dust Storms:</strong> Huge walls of dust that reduce visibility.</p>
+        <p><strong>Firestorms:</strong> Fires so intense they create their own wind.</p>
+
+        <h3>How Storms Form (Expanded)</h3>
+        <p>
+          Storms form when warm, moist air rises and meets cooler air. This rising
+          air cools and condenses into clouds. If there is enough moisture and
+          energy, the clouds grow taller and stronger, turning into storms.
+        </p>
+        <p>
+          Hurricanes need warm ocean water and low wind shear. Tornadoes often form
+          from rotating thunderstorms called supercells. Blizzards need cold air,
+          moisture, and strong winds. Heat waves form when high‑pressure systems
+          trap hot air over an area for days or weeks.
+        </p>
+
+        <h3>Climate Change & Storms</h3>
+        <p>
+          Climate change increases:
+        </p>
+        <ul>
+          <li>Ocean temperatures → stronger hurricanes</li>
+          <li>Air moisture → heavier rainfall</li>
+          <li>Heat waves → more deaths</li>
+          <li>Droughts → more wildfire storms</li>
+          <li>Sea levels → worse flooding</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+    </section>
+
+
+  </main>
+
+  <script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>
+
+
+
+
+
+  <footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+  <script src="script.js"></script>
+</body>
+</html>          
+

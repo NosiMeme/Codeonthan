@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StormGuard | Citations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="slide-down">
+    <div class="logo">
+      <div class="logo-mark">SG</div>
+      <div>
+        <h1>StormGuard</h1>
+        <p>Rescue & Relief Hub · Back’em Up Bratz</p>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="storm-info.html">Storm Info</a>
+      <a href="game.html">Game</a>
+      <a href="poem.html">Poem</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="community.html">Community Support</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stormband.html">StormBand</a>
+      <a href="future.html">Future</a>
+
+      <!-- DROPDOWN -->
+      <div class="nav-more">
+        <div class="nav-more-button" onclick="toggleDropdown()">More</div>
+        <div class="nav-more-menu" id="dropdownMenu">
+          <a href="team.html">Team</a>
+          <a href="citations.html" class="active">Citations</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+          <a href="help.html">Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display =
+      dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-more-button')) {
+      const dropdowns = document.getElementsByClassName('nav-more-menu');
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.style.display === 'block') {
+          openDropdown.style.display = 'none';
+        }
+      }
+    }
+  }
+</script>
+
+<!-- MAIN -->
+<main class="fade-in">
+  <section>
+    <h2>Research & Citations</h2>
+    <p>
+      StormGuard was built using real information from trusted, reliable sources.
+      These citations show where we researched storm safety, emergency response,
+      community support, and volunteer opportunities. We believe in accuracy,
+      honesty, and giving credit to the experts who help keep people safe.
+    </p>
+
+    <!-- STORM INFORMATION SOURCES -->
+    <h3>Storm Information & Safety</h3>
+    <ul>
+      <li><a href="https://www.ready.gov" target="_blank">Ready.gov – Emergency Preparedness</a></li>
+      <li><a href="https://www.weather.gov" target="_blank">NOAA National Weather Service</a></li>
+      <li><a href="https://www.nhc.noaa.gov" target="_blank">National Hurricane Center</a></li>
+      <li><a href="https://www.cdc.gov/disasters" target="_blank">CDC – Disaster Safety & Health</a></li>
+      <li><a href="https://earthobservatory.nasa.gov" target="_blank">NASA Earth Observatory – Weather & Climate</a></li>
+      <li><a href="https://www.emdat.be" target="_blank">EM‑DAT Global Disaster Database</a></li>
+    </ul>
+
+    <!-- COMMUNITY SUPPORT SOURCES -->
+    <h3>Community Support & Recovery</h3>
+    <ul>
+      <li><a href="https://www.fema.gov" target="_blank">FEMA – Community Disaster Recovery</a></li>
+      <li><a href="https://www.samhsa.gov/find-help/disaster-distress-helpline" target="_blank">SAMHSA – Disaster Mental Health Support</a></li>
+      <li><a href="https://www.redcross.org" target="_blank">American Red Cross – Community Relief</a></li>
+    </ul>
+
+    <!-- VOLUNTEER SOURCES -->
+    <h3>Volunteer Opportunities</h3>
+    <ul>
+      <li><a href="https://www.redcross.org/volunteer" target="_blank">American Red Cross – Volunteer</a></li>
+      <li><a href="https://www.ready.gov/cert" target="_blank">CERT – Community Emergency Response Teams</a></li>
+      <li><a href="https://teamrubiconusa.org/volunteer/" target="_blank">Team Rubicon – Disaster Volunteers</a></li>
+      <li><a href="https://www.feedingamerica.org/take-action/volunteer" target="_blank">Feeding America – Volunteer</a></li>
+      <li><a href="https://www.habitat.org/volunteer" target="_blank">Habitat for Humanity – Rebuilding Homes</a></li>
+      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/volunteer/" target="_blank">PetFinder – Animal Rescue Volunteers</a></li>
+    </ul>
+
+    <!-- EDUCATIONAL SOURCES -->
+    <h3>Educational Research</h3>
+    <ul>
+      <li><a href="https://www.un.org/sustainabledevelopment" target="_blank">United Nations – Sustainable Development Goals</a></li>
+      <li><a href="https://www.nationalgeographic.com/environment" target="_blank">National Geographic – Environment & Weather</a></li>
+      <li><a href="https://www.wmo.int" target="_blank">World Meteorological Organization</a></li>
+    </ul>
+
+    <!-- GAME & CREATIVE SOURCES -->
+    <h3>Game, Design & Creative Inspiration</h3>
+    <ul>
+      <li>StormGuard game mechanics inspired by classic arcade runners</li>
+      <li>Color palette inspired by Bratz‑style fashion themes</li>
+      <li>Poem “When the Waters Rise” written by the Back’em Up Bratz team</li>
+    </ul>
+
+    <p>
+      These sources helped us build a project that is accurate, meaningful, and
+      grounded in real science and community care. StormGuard is more than a school
+      project — it’s a resource built with love, teamwork, and real research.
+    </p>
+
+  </section>
+</main>
+
+<footer>StormGuard © 2026 · Built by Back’em Up Bratz</footer>
+
+</body>
+</html>
